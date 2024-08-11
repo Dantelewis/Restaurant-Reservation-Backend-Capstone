@@ -19,6 +19,8 @@ app.use(cors());
 app.use(express.json());
 app.options("*", cors());
 
+app.get("/", (req, res) => res.send("Welcome to the Restaurant Reservation Capstone API"))
+
 app.use("/reservations", reservationsRouter);
 app.use("/tables", tablesRouter);
 
